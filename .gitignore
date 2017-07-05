@@ -1,0 +1,6 @@
+build
+docs
+vendor
+tests/temp
+.idea/
+composer.lock
