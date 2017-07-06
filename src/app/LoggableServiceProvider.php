@@ -12,7 +12,7 @@ class LoggableServiceProvider extends ServiceProvider
 
     public function boot(Router $router)
     {
-        $this->loadMigrationsFrom(realpath(__DIR__ . '/../../database/migrations'));
+        $this->loadMigrationsFrom(realpath(__DIR__ . '/../database/migrations'));
 
         $this->publishFiles();
     }
