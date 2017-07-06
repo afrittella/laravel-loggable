@@ -4,7 +4,7 @@ namespace Afrittella\LaravelLoggable\Domain\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Request;
 
 class Log extends Model
 {
