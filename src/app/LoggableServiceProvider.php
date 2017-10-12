@@ -8,9 +8,7 @@ use Afrittella\LaravelLoggable\Contracts\Logger as LoggerContract;
 
 class LoggableServiceProvider extends ServiceProvider
 {
-    protected $defer = false;
-
-    public function boot(Router $router)
+    public function boot()
     {
         $this->loadMigrationsFrom(realpath(__DIR__ . '/../database/migrations'));
 
@@ -26,7 +24,7 @@ class LoggableServiceProvider extends ServiceProvider
             __DIR__ . '/../config/loggable.php', 'loggable'
         );
 
-        $this->app->bind(LoggerContract::class, 'Afrittella\\LaravelLoggable\\Logger');
+        $this->app->bind(LoggerContract::class, Afrittella\LaravelLoggable\Logger::class);
 
         /*$this->app->singleton('logger', function ($app) {
             return new Logger();
